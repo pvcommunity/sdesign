@@ -1,0 +1,79 @@
+body
+{
+	width: 90%;
+	min-width: 900px;
+	max-width: 1050px;
+	font-family: Verdana, Times New Roman, Sans-Serif;
+	font-weight: normal;
+	font-size: 16px;
+	margin: 0px auto 0px auto;
+	border: 1px solid black;
+	//background-image: url("bg4.jpg");
+	background: #660066 url(../images/bg4.jpg) repeat;
+
+	
+}
+
+#wrap 
+{
+	width: 70%;
+}
+
+.background
+{
+	background-color: #E0C2FF;
+}
+	
+.menu
+{
+	background-color: #000000;
+	font-family: arial;
+	font-weight: normal;
+	font-size: 14px;
+	border: 7px dotted black;
+}
+
+.name
+{
+background-color:purple;
+color:white;
+margin:20px;
+padding:20px;
+text-align: left;
+width: 30%;
+border: 1px solid black;
+float: left;
+}
+.preferences
+{
+background-color:purple;
+color:white;
+margin:20px;
+padding:20px;
+text-align: left;
+width: 30%;
+border: 1px solid black;
+float: right;
+}
+.suggestedroommates
+{
+background-color:purple;
+color:white;
+margin:20px;
+padding:20px;
+text-align: left;
+width: 30%;
+border: 1px solid black;
+float: right;
+}
+.personality
+{
+background-color:purple;
+color:white;
+margin:20px;
+padding:20px;
+text-align: left;
+width: 30%;
+border: 1px solid black;
+float: right;
+}
