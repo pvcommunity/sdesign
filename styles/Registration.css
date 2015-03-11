@@ -15,7 +15,7 @@ and open the template in the editor.
 body {
 	margin: 0;
 	padding: 0;
-	background: #660066 url(../images/bg4.jpg) repeat;
+	background: #660066 url(/images/bg4.jpg) repeat;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 	font-weight: 200;

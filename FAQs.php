@@ -1,6 +1,6 @@
 <?php
 echo "
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang='en'>
 
 <head>
@@ -8,17 +8,18 @@ echo "
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name='description' content=''>
-    <meta name='author' content=''>
+    <meta name='author' content=''>-->
 
-<center> <link rel='stylesheet' type='text/css' href='styles/FAQs.css'</link>
+<title>FAQs</title>
+<!--<center>--> <link rel='stylesheet' type='text/css' href='styles/FAQs.css'</link>
 
 <!-- jQuery -->
     <script src='js/jquery.js'></script>
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-</head>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>";
+/*</head>
 
 <body>
 
@@ -41,10 +42,12 @@ echo "
 			<li><a href='login.php'>Login</a></li>
 			<li class ='last'><a href=#>Question/Concerns</a></li>
 		</ul>
-	</div>
+	</div>*/
+     require 'models/site-templates/top.php';
+echo"
 	<center>
 			<br>
-			<img src='images/FAQs.png'>
+			<img src='styles/images/FAQs.png'>
 	
 	
 <!-- QUESTIONS -->

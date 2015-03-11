@@ -1,0 +1,10 @@
+Hello #OWNERNAME#
+
+Thank you for joining our website #WEBSITENAME#
+
+#SUBMITTER# has sent a request to register your property #PROPERTYNAME# on our website. Please 
+click the link below to confirm the request.
+
+#ACTIVATION-MESSAGE
+
+-Regards

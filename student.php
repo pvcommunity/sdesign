@@ -2,7 +2,6 @@
 require_once('models/config.php');
 if (!securePage($_SERVER['PHP_SELF'])){die();}
 
-echo "";
 
 echo "
 <!DOCTYPE html>
@@ -44,7 +43,7 @@ echo "
 		<ul>
 			<li class='current_page_item'><a href='index.php'>Home</a></li>
                         <li><a href='about.php'>About</a></li>
-                        <li class ='last'><a href='FAQs.php'>Question/Concerns</a></li>
+                        <li class ='last'><a href='faqs.php'>Question/Concerns</a></li>
 						<li><a href='logout-1.php'>Logout</a></li>
 		</ul>
 	</div>
@@ -64,16 +63,16 @@ echo "
 		<br>                  
 		<a href=#><small><u>edit picture</u></small></a>
 		<br>
-		Gender:
+		Gender: $loggedInUser->gender
 		<br>
-		Classification:
+		Classification: $loggedInUser->classification
 		<br>
 		Major:
 		<br>
 		<i>'self statement'</i>
 		<br>
 		<br>
-		<a href=#><img src='message.jpg' style='height:20px; width=30px'></a>       
+		<a href=#><img src='styles/images/message.jpg' style='height:20px; width=30px'></a>       
 	</div>
 	
 					</li>

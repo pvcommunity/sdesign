@@ -4,7 +4,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Nov 23, 2014, 6:59:23 PM
+    Created on : Febuary 13, 2014, 8:59:23 PM
     Author     : Olivia
 */
 
@@ -15,7 +15,7 @@ and open the template in the editor.
 body {
 	margin: 0;
 	padding: 0;
-	background: #660066 url(images/bg4.jpg) repeat;
+	background: #660066 url("styles/images/bg4.jpg") repeat;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 	font-weight: 200;
@@ -55,10 +55,10 @@ a:hover {
 }
 
 a img {
-	border: none;
+	border: 2px;
 }
 
-img.border {
+img.border { 
 }
 
 img.alignleft {
@@ -147,26 +147,22 @@ hr {
 }
 
 /** MENU */
-
+.landlord
+{
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+}
 #menu {
 	overflow: hidden;
-	width: 1100px;
+	width: 1200px;
 	height: 70px;
-	margin: 0px 50px;
+	margin: 0px 1px;
 	background: #000000;
 	font-size: 20px;
 	color: #000000;
 }
 
-#menu-landlord {
-	overflow: hidden;
-	//width: 1100px;
-	height: 70px;
-	margin: 0px 50px;
-	background: #000000;
-	font-size: 20px;
-	color: #000000;
-}
 #menu ul {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px;
@@ -300,8 +296,9 @@ hr {
 
 #three-columns {
 	overflow: hidden;
-	width: 1100px;
+	width: 2100px;
 	margin: 0px auto;
+        
 	padding: 50px 50px 0px 50px;
 }
 
@@ -331,6 +328,10 @@ hr {
 	float: right;
 	width: 430px;
 }
+
+
+
+
 
 /* Two Columns */
 

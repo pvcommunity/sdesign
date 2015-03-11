@@ -20,13 +20,7 @@ if(!empty($_POST))
 	$password = trim($_POST["password"]);
 	$confirm_pass = trim($_POST["passwordc"]);
 	$captcha = md5($_POST["captcha"]);
-        $gender = "";
-        $classification = "";
-        $type = "";
-        $address = "";
-        $city = "";
-        $state = "";
-        $zipcode = 0;
+        
 	
 	
 	if ($captcha != $_SESSION['captcha'])

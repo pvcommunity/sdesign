@@ -4,7 +4,7 @@ UserCake Version: 2.0.2
 http://usercake.com
 */
 
- function check_user($user){
+ /*function check_user($user){
      global $mysqli,$db_table_prefix;
      $stmt = $mysqli->prepare("SELECT
                 title 
@@ -20,7 +20,7 @@ http://usercake.com
      }
      $stmt->close();
      return($title);
- }
+ }*/
  
 require_once("models/config.php");
 if (!securePage($_SERVER['PHP_SELF'])){die();}
@@ -94,7 +94,12 @@ if(!empty($_POST))
 					$loggedInUser->title = $userdetails["title"];
 					$loggedInUser->displayname = $userdetails["display_name"];
 					$loggedInUser->username = $userdetails["user_name"];
-					//$loggedInUser->gender
+					$loggedInUser->gender = $userdetails["gender"];
+                                        $loggedInUser->classification = $userdetails["classification"];
+                                        $loggedInUser->address = $userdetails["address"];
+                                        $loggedInUser->city = $userdetails["city"];
+                                        $loggedInUser->state = $userdetails["state"];
+                                        $loggedInUser->zipcode = $userdetails["zipcode"];
 					
 					//Update last sign in
 					$loggedInUser->updateLastSignIn();

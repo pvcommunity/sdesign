@@ -37,9 +37,10 @@ echo "
 		</ul>
 	</div>
         <!-- BANNER IMAGE HERE -->
-        <div id='banner'><img src='styles/images/PVBanner.jpg' width='1100' height='450' alt='' /></div>
-        
-        <!-- COLUMNS BEGIN HERE -->
+        <div id='banner'><img src='styles/images/PVBanner.jpg' width='1100' height='450' alt='' /></div>";
+
+echo"
+    <!-- COLUMNS BEGIN HERE -->
 	<div id='three-columns'>
 		<div class='content'>
 			<div id='column1'>
@@ -103,4 +104,6 @@ echo "
 	</div>
 	
 </div>";
+        
+        
 ?>

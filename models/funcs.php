@@ -4,6 +4,26 @@ UserCake Version: 2.0.2
 http://usercake.com
 */
 
+// Recently added
+// -----------------------------------------------------------------------------
+function check_user($user){
+     global $mysqli,$db_table_prefix;
+     $stmt = $mysqli->prepare("SELECT
+                title 
+                FROM ".$db_table_prefix."users 
+                WHERE 
+                user_name = ?
+                LIMIT 1");
+     $stmt->bind_param("s",$user);
+     $stmt->execute();
+     $stmt->bind_result($title);
+     while ($stmt->fetch()){
+         $title;
+     }
+     $stmt->close();
+     return($title);
+ }
+
 //Functions that do not interact with DB
 //------------------------------------------------------------------------------
 
