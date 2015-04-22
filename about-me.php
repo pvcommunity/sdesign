@@ -33,11 +33,22 @@
 require_once("models/config.php");
 if(!securePage($_SERVER['PHP_SELF'])){die();}
 
+$query_string = $_SERVER['QUERY_STRING'];
+//list($field,$value) = explode('=',$query_string);
+//$query = array('field'=>$field,'value'=>$id);
+    //echo $query_string;
+    $id = substr($query_string,3);
+    echo $id;
+    $s_id = intval($id);
+    echo $s_id;
+    //echo $query['field'].'|'.$query['value'];
+    
+    
 // Forms posted
 if(!empty($_POST))
 {
     $errors = array();
-    $s_id = $_REQUEST["id"];
+    
     
     $s_major = $_POST["s_major"];
     $s_self_stmt = $_POST["s_self_stmt"];
@@ -74,7 +85,8 @@ if(!empty($_POST))
 	case "<$500":
 	case "":
     }*/
-
+    
+    //count($errors) = 0;
     if(count($errors) == 0)
     {
         /*$row = fetchStudent($s_id);
@@ -82,17 +94,42 @@ if(!empty($_POST))
         $student = new Student($user,$display,$pass,$email,$gender,$classification,$s_id);
 	$student->set_about_me($s_id,$s_major,$s_self_stmt,$s_social,$s_sleep,$s_cleaning);
 	$student->set_preferences($s_id,$r_major,$r_major_imp,$r_social,$r_social_imp,$r_sleep,$r_sleep_imp,$r_cleaning,$r_cleaning_imp,$p_type,$p_type_imp,$p_rent,$p_rent_imp,$p_sharing,$p_sharing_imp,$p_smoking,$p_smoking_imp);
+        
+        $successes[] = lang("ACCOUNT_PERSONALITY_QUIZ",array($id));
     }
 }
 
 echo"
 <title>Registration, Pt. 2</title>
 <link rel='stylesheet' type='text/css' href='styles/PersonalityQuiz.css'>
+<!--<link rel='stylesheet' type='text/css' href='styles/bootstrap-3.2.0/css/bootstrap.min.css'>-->
+<link rel='stylesheet' type='text/css' href='styles/Notifications.css'>
+	
 <script type='text/javascript' src='styles/jquery-1.11.1/jquery.min.js'></script>
 <script type='text/javascript' src='styles/js/sanwebe_char_counter.js'></script>
+
+<style>
+    legend {
+    display: block;
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+label{
+    font-weight: bold;
+}
+ h1 {
+ font: Bernard MT Condensed; 
+}
+</style>
 ";
 
-echo"<div class='container'>
+echo"<body><div class='container'>
 <div id='wrapper'> 
     <div id='logo'>
        
@@ -100,19 +137,20 @@ echo"<div class='container'>
                     <br>
                     <br>
                     <br>
-                      <center><h1><a href='#'>PV Student Community</a></h1></center>       
+                      <center><h1 style='font:Bernard MT Condensed;'><a href='#'>PV Student Community</a></h1></center>       
 					<br>
 					<br>
                     <br>
-</div>
-	<div id='menu'>
-		<ul>
-			<li class='current_page_item'><a href='index.php'>Home</a></li>
-			<li><a href='login.php'>Login</a></li>
-                        <li class ='last'><a href='faqs.php'>Question/Concerns</a></li>
-		</ul>
-	</div>
-	
+    </div>
+    <div id='menu'>
+    <center>
+            <ul>
+                    <li class='current_page_item'><a href='index.php'>Home</a></li>
+                    <li><a href='login.php'>Login</a></li>
+                    <li class ='last'><a href='faqs.php'>Question/Concerns</a></li>
+            </ul>
+            </center>
+    </div>
 	
 	
 <center>
@@ -121,9 +159,10 @@ echo"<div class='container'>
 			
 ";
 
+echo resultBlock($errors,$successes);
 echo "
 <form name='registration_pt2' action=' ".$_SERVER['PHP_SELF']."' method='post'>
-    <fieldset id='about-me'><label>About Me:</label>
+    <fieldset id='about-me'><legend>About Me:</legend>
         <p>
         <label>Major:</label>
         <select name='s_major'>
@@ -172,8 +211,8 @@ echo "
             <option value='Neat'>Neat</option>
         </select>
         </p>	
-    </fieldset>
-    <fieldset id='roommate-pref'><label>Roommate Preferences:</label>
+    </fieldset><br>
+    <fieldset id='roommate-pref'><legend>Roommate Preferences:</legend>
 <p>
 			   <label>Major:</label>
 			   <select name='r_major'>
@@ -244,8 +283,8 @@ echo "
 				<option value='75'>Very Important</option>
 			   </select>
 			   </p>	
-    </fieldset>
-    <fieldset id='property-pref'><label>Property Preferences:</label>
+    </fieldset><br>
+    <fieldset id='property-pref'><legend>Property Preferences:</legend>
 <p>
                 <label>Type of Residence:<label>
 			   <select name='p_type'>
@@ -313,8 +352,8 @@ echo "
 				<option value='75'>Very Important</option>
 			   </select>
 			   </p>
-    </fieldset>
-    <input id='myBtn' type='submit' value='Submit' />
+    </fieldset><br>
+    <input id='myBtn' type='submit' value='Submit' onClick='window.location=personality-quiz.php;' />
 </form>
 ";
 ?>
