@@ -11,7 +11,7 @@ echo "
 <title>PV Student Community</title>
 <style type="text/css">
 body{
-background-image:url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSvqrtMblxZERcRiBWfH8v0u_DxoB0P6GWJrd-A5mn_7lz9I_IuAA) ;
+background-image:url('styles\images\purple.jpg') ;
 background-repeat:repeat;
 background-color:#40113f;
 font-family:"lucida sans unicode";
@@ -26,7 +26,7 @@ left:50%;
 margin-left:-392px;
 top:0px;
 width:775px;
-background-image:url(http://cbimg6.com/layouts/10/07/36366ac.png);
+background-image:url('styles\images\36366ac.png');
 background-repeat:repeat;
 overflow:auto;
 }
