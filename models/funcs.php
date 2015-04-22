@@ -23,6 +23,53 @@ function check_user($user){
      $stmt->close();
      return($title);
  }
+ 
+ /*function fetchUserId($user){
+     global $mysqli,$db_table_prefix;
+     $stmt = $mysqli->prepare("SELECT
+                id
+                FROM ".$db_table_prefix."users
+                WHERE
+                user_name = ?
+                LIMIT 1");
+     $stmt->bind_param("s",$user);
+     $stmt->execute();
+     $stmt->bind_result($id);
+     while($stmt->fetch()){
+         $id;
+     }
+     $stmt->close();
+     return($id);
+ }*/
+function fetchStudent($id)
+{
+    if($id != NULL) {
+        $data = $id;
+    }
+    
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare("SELECT 
+            user_name,
+            display_name,
+            password,
+            email,
+            gender,
+            classification
+            FROM ".$db_table_prefix."users
+            WHERE
+            id = ?");
+    $stmt->bind_param("i",$data);
+    
+    $stmt->execute();
+    $stmt->bind_result($user,$display,$password,$email,$gender,$classification);
+    
+    while($stmt->fetch()) {
+        $row = array('user_name'=>$user,'display_name'=>$display,'password'=>$password,'email'=>$email,'gender'=>$gender,'classification'=>$classification);
+    }
+    
+    $stmt->close();
+    return($row);
+}
 
 //Functions that do not interact with DB
 //------------------------------------------------------------------------------

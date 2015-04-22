@@ -40,8 +40,8 @@ $lang = array_merge($lang,array(
 	%m1%activate-account.php?token=%m2%",							
 	"ACCOUNT_ACTIVATION_COMPLETE"		=> "You have successfully activated your account. You can now login <a href=\"login.php\">here</a>.",
 	"ACCOUNT_REGISTRATION_COMPLETE_TYPE1"	=> "You have successfully registered. You can now login <a href=\"login.php\">here</a>.",
-        "ACCOUNT_REGISTRATION_COMPLETE_TYPE_STUDENT1"	=> "Congrats! Your username is the same username you use for eCourses and Panthertracks. Click here to finish setting up your <a href=\"about-me.php\">profile</a>",
-        "ACCOUNT_REGISTRATION_COMPLETE_PROPERTY" => "You have successfully registered. Your username is: #username.",
+        "ACCOUNT_REGISTRATION_COMPLETE_TYPE_STUDENT1"	=> "Congrats! Your username is: <b>%m1%</b>. Click here to finish setting up your <a href=\"about-me.php?id=%m2%\">profile</a>.",
+        "ACCOUNT_REGISTRATION_COMPLETE_PROPERTY" => "You have successfully registered. Your username is: %m1%. You can now login <a href=\"login.php\">here</a>.",
 	"ACCOUNT_PASSWORD_NOTHING_TO_UPDATE"	=> "You cannot update with the same password",
 	"ACCOUNT_PASSWORD_UPDATED"		=> "Account password updated",
 	"ACCOUNT_EMAIL_UPDATED"			=> "Account email updated",
@@ -54,6 +54,8 @@ $lang = array_merge($lang,array(
 	"ACCOUNT_PERMISSION_ADDED"		=> "Added access to %m1% permission levels",
 	"ACCOUNT_PERMISSION_REMOVED"		=> "Removed access from %m1% permission levels",
 	"ACCOUNT_INVALID_USERNAME"		=> "Invalid username",
+        "ACCOUNT_STUDENT_INVALID_EMAIL"         => "Please use your university-assigned email address",
+        "ACCOUNT_PERSONALITY_QUIZ"              => "Great! Click <a href=\"personality-quiz.php?id=%m1%\">Here</a> to Complete the last step of your profile setup"
 	));
 
 //Configuration
